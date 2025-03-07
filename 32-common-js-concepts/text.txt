@@ -1,0 +1,11 @@
+************ Common Interview Questions *************
+1. Tell the difference between primitive and non-primitive types in Js?
+2. What  are the truthy and falsy values? Give me some examples?
+3. What is the difference between null and undefine?
+4. What are the difference between double equal(==) and triple equal(===)?
+5. What is scope in javaScript?
+6. Define block scope and global scope?
+7. What is hoisting is javaScript?
+8. How to use the javaScript callback function?
+9. Explain closure in javaScript?
+10. Explain passed by value and passed by reference.

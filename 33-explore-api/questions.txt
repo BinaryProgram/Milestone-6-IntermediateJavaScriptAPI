@@ -1,0 +1,6 @@
+1) What is an api?
+2) What are the http methods supported by rest?
+3) Can you use get request instead of put to create a resource?
+4) What is the difference between put and post?
+5) What is json?
+6) What are crud operations?
