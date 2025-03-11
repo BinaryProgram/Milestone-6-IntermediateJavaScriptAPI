@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunting API</title>
+    <!-- tailwind v5 and daisyui v5 CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -41,9 +42,56 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="container mx-auto">
+      <!-- search and input section -->
+      <section class="relative mt-20 flex items-center justify-center">
+        <label
+          class="flex h-14 w-full items-center gap-3 rounded-md border-none bg-[#1100000f] md:w-3/5 lg:w-3/5"
+        >
+          <svg
+            class="ml-3 h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="2.5"
+              fill="none"
+              stroke="currentColor"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </g>
+          </svg>
+          <input
+            id="input-value"
+            type="search"
+            required
+            placeholder="search your phone"
+            class="w-full border-none focus:outline-none"
+          />
+          <button
+            id="search-btn"
+            onclick="searchLoadPhone()"
+            class="btn btn-soft btn-accent inline-block h-full w-2/5 bg-[#0D6EFD] font-[poppins] text-base font-bold text-[#fff] md:w-1/5 lg:w-1/5"
+          >
+            Search
+          </button>
+        </label>
+      </section>
+
+      <!-- phone section -->
       <section>
-        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- loading snipper -->
+        <div id="loading-spinner" class="mt-[25vh] hidden text-center">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+
+        <div
+          id="phone-container"
+          class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+        >
           <!-- <div class="card bg-base-100 w-96 shadow-sm">
             <figure>
               <img
@@ -63,7 +111,47 @@
             </div>
           </div> -->
         </div>
+        <div id="show-btn" onclick="showAll()" class="m-12 hidden text-center">
+          <button class="btn btn-secondary">Show All</button>
+        </div>
       </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="show-phone-detail.showModal()">open modal</button> -->
+      <dialog id="show_phone_detail" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <!-- <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p> -->
+          <div id="details-about-each-phone">
+            <!-- <img src="" alt="phone Images" />
+            <div>
+              <h1></h1>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+              </p>
+              <h3>Storage: <span></span></h3>
+              <h3>Display Size: <span></span></h3>
+              <h3>Chip set: <span></span></h3>
+              <h3>Memory: <span></span></h3>
+              <h3>Slug: <span></span></h3>
+              <h3>Release Date: <span></span></h3>
+              <h3>Brand: <span></span></h3>
+              <h3>GPS: <span></span></h3>
+            </div> -->
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button
+                class="btn bg-[#dc3545] font-[poppins] text-xl font-bold text-[#fff] inline-block w-40 h-16"
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer></footer>
     <script src="./phone.js"></script>
