@@ -1,0 +1,29 @@
+What is JavaScript?
+
+Just-In-Time (JIT) Compilation
+JavaScript is often executed in web browsers using a JIT compiler. This means that the JavaScript code is compiled into machine code at runtime, rather than before execution. This allows for optimizations that can improve performance.
+
+Garbage Collection ->
+JavaScript has automatic memory management through garbage collection. This means that the JavaScript engine automatically finds and frees up memory that is no longer in use, helping to prevent memory leaks.
+
+Multi-Paradigm ->
+JavaScript supports multiple programming paradigms, including:
+    Procedural: Writing sequences of instructions to perform tasks.
+    Object-Oriented: Using objects and classes to structure code.
+    Functional: Treating functions as first-class citizens and using concepts like higher-order functions and closures.
+
+Prototype-Based ->
+JavaScript uses prototypes for inheritance. Instead of classes, JavaScript objects can inherit properties and methods from other objects. This is done through the prototype chain.
+
+Dynamically Typed ->
+JavaScript is dynamically typed, meaning that variable types are determined at runtime. You don't need to declare the type of a variable when you create it, and a variable can hold values of different types at different times.
+
+High Abstraction ->
+JavaScript provides a high level of abstraction, meaning it allows you to perform complex tasks with relatively simple code. This includes features like high-level APIs for manipulating the DOM, handling events, and making network requests.
+
+Key Point ->
+
+- V8 engine
+- Functional execution context vs Global execution context
+- call stack
+- single threaded, asynchronous and synchronous
